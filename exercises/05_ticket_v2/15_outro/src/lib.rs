@@ -8,9 +8,9 @@ mod title;
 //
 // This hides the internal structure of the crate from your users, while still
 // allowing you to organize your code however you like.
-pub use description::TicketDescription;
-pub use status::Status;
-pub use title::TicketTitle;
+pub use description::{TicketDescription, TicketDescriptionError};
+pub use status::{ParseStatusError, Status};
+pub use title::{TicketTitle, TicketTitleError};
 
 #[derive(Debug, PartialEq, Clone)]
 // We no longer need to make the fields private!
